@@ -6,7 +6,7 @@
           <view class="content-1" :style="contentStyle">
             <view class="content-2">
               <view class="content-3">
-                <image :src="src" :mode="mode" :style="contentStyle" />
+                <image :src="src" :mode="mode" :style="contentStyle" @click="onClick"/>
               </view>
             </view>
           </view>
@@ -89,6 +89,9 @@
         // #endif
         return style;
       },
+      onClick(){
+        this.$emit('click');
+      }
     }
   };
 </script>

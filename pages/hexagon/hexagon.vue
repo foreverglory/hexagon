@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
     <view class="item-1">
-      <hexagon class="hexagon" src="/static/logo.png" mode="aspectFill" size="200rpx"></hexagon>
+      <hexagon class="hexagon" src="/static/logo.png" mode="aspectFill" size="200rpx" @click="hexagonClick"></hexagon>
       <hexagon class="hexagon" src="/static/logo.png" mode="aspectFill" size="200rpx" border-color="red"></hexagon>
       <hexagon class="hexagon" src="/static/logo.png" mode="aspectFill" size="200rpx" border-color="blue"></hexagon>
     </view>
@@ -29,7 +29,16 @@
 			return {
 				
 			};
-		}
+		},
+    methods:{
+      hexagonClick(){
+        uni.showModal({
+          title: 'Click',
+          content: 'You click...',
+          showCancel: false
+        });
+      }
+    }
 	}
 </script>
 
